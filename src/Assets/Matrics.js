@@ -1,0 +1,68 @@
+import { Dimensions, Platform } from 'react-native';
+import { scale } from '@Components/Helpers/function';
+
+const { width, height } = Dimensions.get('window');
+
+const metrics = {
+  section: scale(25),
+  smallSection : scale(12.5),
+  baseSection: scale(40),
+  doubleBaseSection: scale(80),
+  baseMargin: scale(10),
+  mediumBaseMargin: scale(15),
+  bigMargin: scale(15),
+  doubleBaseMargin: scale(15),
+  tinyMargin: scale(2),
+  miniMargin: scale(3),
+  smallMargin: scale(5),
+  mediumMargin: scale(8),
+  doubleSection: scale(52),
+  horizontalLineHeight: 1,
+  fontScale : scale(25),
+  bigMediumMargin : scale(35),
+  barHeight: scale(30),
+  screenWidth: width < height ? width : height,
+  screenHeight: width < height ? height : width,
+  navBarHeight: (Platform.OS === 'ios') ? scale(64) : scale(54),
+  rowHeight: scale(60),
+  scalingHeight : scale(45),
+  profileIconSection: scale(60),
+  imageProfileSection: scale(130),
+  imageProfileSmallSection: scale(100),
+  inputHeight: scale(50),
+  buttonHeight: scale(50),
+  buttonRadius: scale(5),
+  borderRadius: scale(5),
+  borderDoubleRadius: scale(10),
+  borderTripleRadius: scale(15),
+  fontMediumScale : scale(17),
+  borderWidth: 1,//scale(2),
+  borderDoubleWidth: scale(4),
+  borderThick: 4,//scale(5),
+  thinBorder: 1,
+  widthBox: scale(300),
+  compaignItemHeight: scale(200),
+  channelImage :  scale(210),
+  brandItemHeight: scale(80),
+  smallBrandHeight : scale(70),
+  inspireImageHeight: scale(125),
+  inspireImageWidth: scale(210),
+  icons: {
+    tiny: scale(15),
+    small: scale(20),
+    medium: scale(30),
+    large: scale(45),
+    xl: scale(50),
+  },
+  images: {
+    small: scale(20),
+    medium: scale(50),
+    large: scale(90),
+    logo: scale(200),
+  },
+  fontBold: 'bold',
+  keyboardVerticalOffset:64,
+  keyboardShouldPersistTaps:'handled'
+};
+
+export default metrics;
